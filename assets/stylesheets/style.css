@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* ---------------------------------------------
+  .l-header__pc
+------------------------------------------------ */
+.l-header__pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 4%;
+  z-index: 1;
+}
+/* ---------------------------------------------
+  .l-header__sp
+------------------------------------------------ */
+.l-header__sp {
+  display: none;
+}
+/*
+  .c-logo
+------------------------------------------------ */
+.c-logo {
+  width: 50px;
+  height: 50px;
+}
+/*
+  .c-nav
+------------------------------------------------ */
+.c-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+/* .c-nav__item */
+.c-nav__item {
+  text-decoration: none;
+  color: #fff;
+  transition: color .3s;
+}
+.c-nav__item:hover {
+  color: #ccc;
+}
+/* ---------------------------------------------
+  .p-index-home__cover
+------------------------------------------------ */
+.p-index-home__cover {
+  position: relative;
+  background-size: cover;
+  background-image: url(../images/hero.jpg);
+  min-height: 100vh;
+}
+/*
+  .p-index-home__text
+------------------------------------------------ */
+.p-index-home__text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+/*
+  .p-index-home__text--title
+------------------------------------------------ */
+.p-index-home__text--title {
+  color: #fff;
+  font-size: 4rem;
+}
+/* ---------------------------------------------
+  .l-main
+------------------------------------------------ */
+.l-main {
+  color: #808080;
+}
+/*
+  .p-index-container
+------------------------------------------------ */
+.p-index-container {
+  padding: 100px 4%;
+  margin: 0 auto;
+  background-origin: padding-box;
+}
+.p-index-container:nth-child(even) {
+  background-color: #eee;
+}
+/*
+  .p-index-lead
+------------------------------------------------ */
+.p-index-lead {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+}
+.p-index-lead::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #ffbf1f;
+}
+/* .p-index-lead__heading */
+.p-index-lead__heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #555;
+}
+/* .p-index-lead__description */
+.p-index-lead__description {
+ font-size: 18px;
+ line-height: 2rem;
+}
+/* .p-index-subheading */
+.p-index-subheading {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #555;
+}
+/* .c-text */
+.c-text {
+  line-height: 1.7rem;
+}
+/*
+  .p-index-about__container
+------------------------------------------------ */
+.p-index-about__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* .p-index-about__img */
+.p-index-about__img {
+  width: 37%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.p-index-about__img:nth-child(n + 3) {
+  margin-top: 20px;
+}
+.p-index-about__img:nth-child(1),
+.p-index-about__img:nth-child(4) {
+  width: 57%;
+}
+/*
+  .p-index-work__container
+------------------------------------------------ */
+.p-index-work__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+/* .p-index-work__contents */
+.p-index-work__contents {
+  width: 30%;
+}
+.p-index-work__contents:nth-child(n + 4) {
+  margin-top: 30px;
+}
+/* .p-index-work__img */
+.p-index-work__img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+/*
+  .p-index-blog__contents
+------------------------------------------------ */
+.p-index-blog__contents {
+  display: flex;
+  margin-top: 40px;
+}
+.p-index-blog__contents:first-child {
+  margin-top: 0;
+}
+.p-index-blog__contents:nth-child(2) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+/* .p-index-blog__img */
+.p-index-blog__img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+}
+/* .p-index-blog__text  */
+.p-index-blog__text {
+  margin: 0 20px;
+}
+/* .p-index-blog__button */
+.p-index-blog__button {
+  margin-top: 50px;
+}
+/* .c-button__more */
+.c-button__more {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #ffbf1f;
+  color: #fff;
+  border-radius: 5px;
+}
+/* ---------------------------------------------
+  SP style
+------------------------------------------------ */
+@media screen and (max-width: 768px) {
+.l-header__pc {
+  display: none;
+}
+.l-header__sp {
+  display: block;
+}
+/* ハンバーガーアイコン */
+.c-drawer {
+  cursor: pointer;
+  display: block;
+  width: 56px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+.c-drawer__parts,
+.c-drawer__parts:before,
+.c-drawer__parts:after {
+  background-color: #fff;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.c-drawer__parts:before,
+.c-drawer__parts:after {
+  content: " ";
+}
+.c-drawer__parts:before {
+  top: 20px
+}
+.c-drawer__parts:after {
+  top: -20px
+}
+
+.p-index-home__text {
+  text-align: center;
+  margin-top: 0;
+}
+.p-index-home__text--title {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.p-index-about__container {
+  display: block;
+}
+.p-index-about__img {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.p-index-about__img:first-child {
+  margin-top: 0;
+}
+.p-index-about__img:nth-child(1),
+.p-index-about__img:nth-child(4) {
+  width: 100%;
+}
+.p-index-work__container {
+  display: block;
+}
+.p-index-work__contents {
+  margin-top: 40px;
+  width: 100%;
+}
+.p-index-work__contents:first-child {
+  margin-top: 0;
+}
+.p-index-blog__contents {
+  display: block;
+}
+.p-index-blog__contents:nth-child(2) {
+  flex-direction: row;
+  text-align: left;
+}
+.p-index-blog__img {
+  width: 100%;
+  height: auto;
+}
+.p-index-blog__text {
+  margin: 20px 0;
+  width: 100%;
+}
+.p-index-blog__button {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #ffbf1f;
+  border-radius: 5px;
+}
+}
+
+/* ---------------------------------------------
+  PC style
+------------------------------------------------ */
+@media screen and (min-width: 769px) {
+
+}
